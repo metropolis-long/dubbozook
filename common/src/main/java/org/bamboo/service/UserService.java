@@ -1,4 +1,4 @@
-package org.example.service;
+package org.bamboo.service;
 
 public interface UserService {
     String getUser();

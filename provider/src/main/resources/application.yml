@@ -1,0 +1,23 @@
+
+server:
+  port: 8800
+dubbo:
+  application:
+    name: provider-app
+  protocol:
+    name: dubbo
+    port: 20884
+  registry:
+    address: zookeeper://localhost:2181
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  #使用druid连接池
+    #username: 账号 # 如果你springboot2整合druid连接池！使用此信息配置账号
+    #password:
+    druid:
+      url: jdbc:mysql://localhost:3306/studb
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+

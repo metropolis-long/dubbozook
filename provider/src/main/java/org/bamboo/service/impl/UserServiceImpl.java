@@ -1,8 +1,8 @@
-package bamboo.service.impl;
+package org.bamboo.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboService;
-import org.example.service.UserService;
+import org.bamboo.service.UserService;
 
 @DubboService
 @Slf4j
