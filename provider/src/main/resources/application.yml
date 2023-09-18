@@ -23,6 +23,11 @@ spring:
 mybatis-plus:
   type-aliases-package: org.bamboo.pojo
   mapper-locations: classpath*:org.bamboo.mapper.*Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
 
 
 
