@@ -11,28 +11,28 @@
  Target Server Version : 50717
  File Encoding         : 65001
 
- Date: 17/09/2023 17:38:46
+ Date: 18/09/2023 14:06:46
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Table structure for stu
+-- Table structure for student
 -- ----------------------------
-DROP TABLE IF EXISTS `stu`;
-CREATE TABLE `stu`  (
+DROP TABLE IF EXISTS `student`;
+CREATE TABLE `student`  (
   `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of stu
+-- Records of student
 -- ----------------------------
-INSERT INTO `stu` VALUES (1, '小宝');
-INSERT INTO `stu` VALUES (2, '都难');
-INSERT INTO `stu` VALUES (3, '槐石');
+INSERT INTO `student` VALUES (1, 'nan');
+INSERT INTO `student` VALUES (2, '22开没开');
+INSERT INTO `student` VALUES (3, '3让访客');
 
 -- ----------------------------
 -- Table structure for user
