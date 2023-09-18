@@ -8,5 +8,7 @@
     <select id="queryAll" resultType="student">
         select * from student
     </select>
-
+    <select id="getStudentById" resultType="student">
+        select * from student where #{id}
+    </select>
 </mapper>

@@ -1,7 +1,6 @@
 package org.bamboo.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.dubbo.common.stream.StreamObserver;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.bamboo.mapper.StudentMapper;
 import org.bamboo.pojo.Student;
@@ -10,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-@DubboService(version = "1.0")
+@DubboService(version = "2.0")
 @Slf4j
-public class StudentServiceImpl implements StudentService {
+public class StudentServiceV2Impl implements StudentService {
 
 
     @Autowired
