@@ -20,4 +20,9 @@ spring:
       password: 123456
       driver-class-name: com.mysql.cj.jdbc.Driver
 
+mybatis-plus:
+  type-aliases-package: org.bamboo.pojo
+  mapper-locations: classpath*:org.bamboo.mapper.*Mapper.xml
+
+
 

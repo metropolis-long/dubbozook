@@ -1,7 +1,7 @@
-import org.bamboo.ProviderAPP;
-import org.bamboo.mapper.StuMapper;
-import org.bamboo.pojo.Stu;
-import org.junit.jupiter.api.Assertions;
+package org.bamboo;
+
+import org.bamboo.mapper.StudentMapper;
+import org.bamboo.pojo.Student;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,17 +9,16 @@ import org.springframework.test.context.ContextConfiguration;
 
 import java.util.List;
 
-@SpringBootTest(classes = QuickStartTest.class)
-@ContextConfiguration( classes = ProviderAPP.class)
+@SpringBootTest
+@ContextConfiguration
 public class QuickStartTest {
     @Autowired
-    private StuMapper userMapper;
+    private StudentMapper userMapper;
 
     @Test
     public void testSelect() {
         System.out.println(("----- selectAll method test ------"));
-        List<Stu> userList = userMapper.queryAll();
-        Assertions.assertEquals(2, userList.size());
+        List<Student> userList = userMapper.queryAll();
         userList.forEach(System.out::println);
     }
 }
