@@ -49,20 +49,28 @@
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>3.2.4</version>
+            <version>3.2.0</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.dubbo.extensions</groupId>-->
+<!--            <artifactId>dubbo-serialization-kryo</artifactId>-->
+<!--            <version>1.0.1</version>-->
+<!--        </dependency>-->
 
-
+<!--        <dependency>-->
+<!--            <groupId>org.apache.dubbo</groupId>-->
+<!--            <artifactId>dubbo-metadata-definition-protobuf</artifactId>-->
+<!--            <version>3.2.0</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-registry-zookeeper</artifactId>
-            <version>3.2.4</version>
+            <version>3.2.0</version>
         </dependency>
-
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-rpc-triple</artifactId>
-            <version>3.2.4</version>
+            <version>3.2.5</version>
         </dependency>
         <dependency>
             <groupId>org.apache.zookeeper</groupId>

@@ -1,15 +1,10 @@
 
 server:
   port: 8800
-dubbo:
+
+spring:
   application:
     name: provider-app
-  protocol:
-    name: tri
-    port: -1
-  registry:
-    address: zookeeper://localhost:2181
-spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource  #使用druid连接池
     #username: 账号 # 如果你springboot2整合druid连接池！使用此信息配置账号
@@ -19,7 +14,15 @@ spring:
       username: root
       password: 123456
       driver-class-name: com.mysql.cj.jdbc.Driver
-
+dubbo:
+  protocol:
+    #    name: dubbo
+    name: tri
+    port: -1
+  #    serialization: protobuf
+  #    serialization: kryo
+  registry:
+    address: zookeeper://localhost:2181
 mybatis-plus:
   type-aliases-package: org.bamboo.pojo
   mapper-locations: classpath*:org.bamboo.mapper.*Mapper.xml
