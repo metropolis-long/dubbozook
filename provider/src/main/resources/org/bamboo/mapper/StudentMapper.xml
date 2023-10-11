@@ -5,10 +5,10 @@
 <!-- namespace = 接口的全限定符 -->
 <mapper namespace="org.bamboo.mapper.StudentMapper">
 
-    <select id="queryAll" resultType="student">
+    <select id="queryAll" resultType="org.bamboo.pojo.Student">
         select * from student
     </select>
-    <select id="getStudentById" resultType="student">
+    <select id="getStudentById" resultType="org.bamboo.pojo.Student">
         select * from student where #{id}
     </select>
 </mapper>

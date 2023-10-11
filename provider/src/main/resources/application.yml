@@ -5,12 +5,17 @@ server:
 spring:
   application:
     name: provider-app
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource  #使用druid连接池
-    #username: 账号 # 如果你springboot2整合druid连接池！使用此信息配置账号
-    #password:
-    druid:
-      url: jdbc:mysql://localhost:3306/studb
+  master:
+    datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://mjn急急急:3308/studb
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  slave:
+    datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://hhhhhhhhhhhhh:3307/studb
       username: root
       password: 123456
       driver-class-name: com.mysql.cj.jdbc.Driver
@@ -23,10 +28,11 @@ dubbo:
   #    serialization: kryo
   registry:
     address: zookeeper://localhost:2181
-mybatis-plus:
+mybatis:
   type-aliases-package: org.bamboo.pojo
   mapper-locations: classpath*:org.bamboo.mapper.*Mapper.xml
   configuration:
+    map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 

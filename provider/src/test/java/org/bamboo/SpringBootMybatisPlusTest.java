@@ -18,7 +18,7 @@ public class SpringBootMybatisPlusTest {
     @Test
     public void test(){
 
-        List<User> users = userMapper.selectList(null);
+        List<User> users = userMapper.findAll();
 
         System.out.println("users = " + users);
     }
