@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;
 
-@DubboService
+//@DubboService
 @Slf4j
 public class StreamObserverServiceImpl implements StreamObserverService {
 

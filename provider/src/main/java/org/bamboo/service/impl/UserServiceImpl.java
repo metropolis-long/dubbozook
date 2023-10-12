@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-@DubboService
+//@DubboService
 @Slf4j
 public class UserServiceImpl implements UserService {
 

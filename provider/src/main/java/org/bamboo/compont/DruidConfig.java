@@ -57,6 +57,10 @@ public class DruidConfig {
         SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
         sqlSessionFactory.setDataSource(dynamicDataSource);
         sqlSessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MAPPER_XML_PATH));
+        sqlSessionFactory.setTypeAliasesPackage("org.bamboo.pojo");
+        org.apache.ibatis.session.Configuration conf = new org.apache.ibatis.session.Configuration();
+        conf.setMapUnderscoreToCamelCase(true);
+        sqlSessionFactory.setConfiguration(conf);
         return sqlSessionFactory;
     }
  

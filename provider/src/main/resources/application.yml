@@ -8,32 +8,27 @@ spring:
   master:
     datasource:
       type: com.alibaba.druid.pool.DruidDataSource
-      url: jdbc:mysql://mjn急急急:3308/studb
+      url: jdbc:mysql://47.194.159.135:3308/studb
       username: root
       password: 123456
       driver-class-name: com.mysql.cj.jdbc.Driver
   slave:
     datasource:
       type: com.alibaba.druid.pool.DruidDataSource
-      url: jdbc:mysql://hhhhhhhhhhhhh:3307/studb
+      url: jdbc:mysql://47.194.159.135:3307/studb
       username: root
       password: 123456
       driver-class-name: com.mysql.cj.jdbc.Driver
-dubbo:
-  protocol:
-    #    name: dubbo
-    name: tri
-    port: -1
-  #    serialization: protobuf
-  #    serialization: kryo
-  registry:
-    address: zookeeper://localhost:2181
-mybatis:
-  type-aliases-package: org.bamboo.pojo
-  mapper-locations: classpath*:org.bamboo.mapper.*Mapper.xml
-  configuration:
-    map-underscore-to-camel-case: true
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#dubbo:
+#  protocol:
+#    #    name: dubbo
+#    name: tri
+#    port: -1
+#  #    serialization: protobuf
+#  #    serialization: kryo
+#  registry:
+#    address: zookeeper://localhost:2181
+
 
 
 
