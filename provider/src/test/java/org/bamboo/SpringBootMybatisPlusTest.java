@@ -1,6 +1,8 @@
 package org.bamboo;
 
+import org.bamboo.mapper.StudentMapper;
 import org.bamboo.mapper.UserMapper;
+import org.bamboo.pojo.Student;
 import org.bamboo.pojo.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +18,7 @@ import java.util.List;
 public class SpringBootMybatisPlusTest {
 
     @Autowired
-    private UserMapper userMapper;
+    private StudentMapper studentMapper;
     @Autowired
     private RedisTemplate redisTemplate;
 
@@ -26,9 +28,10 @@ public class SpringBootMybatisPlusTest {
     @Test
     public void test(){
 
-        List<User> users = userMapper.findAll();
-
-        System.out.println("users = " + users);
+        List<Student> students = studentMapper.queryAll();
+        Student student = studentMapper.getStudentById("1");
+        System.out.println("students = " + students);
+        System.out.println(student);
     }
 
     @Test
