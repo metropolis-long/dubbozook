@@ -8,7 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-//@EnableDubbo
+@EnableDubbo
 @MapperScan("org.bamboo.mapper")
 public class ProviderAPP {
 

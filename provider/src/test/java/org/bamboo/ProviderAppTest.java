@@ -1,9 +1,10 @@
 package org.bamboo;
 
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.bamboo.mapper.StudentMapper;
-import org.bamboo.mapper.UserMapper;
 import org.bamboo.pojo.Student;
-import org.bamboo.pojo.User;
+import org.bamboo.service.StudentService;
+import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,13 +16,15 @@ import redis.clients.jedis.JedisPool;
 import java.util.List;
 
 @SpringBootTest
-public class SpringBootMybatisPlusTest {
+public class ProviderAppTest {
 
     @Autowired
     private StudentMapper studentMapper;
     @Autowired
     private RedisTemplate redisTemplate;
 
+    @DubboReference(version = "1.0",registry = {"zookeeper://localhost:2181"})
+    private StudentService studentService;
     @Autowired
     private JedisPool jedisPool;
 
@@ -33,7 +36,12 @@ public class SpringBootMybatisPlusTest {
         System.out.println("students = " + students);
         System.out.println(student);
     }
+    @Test
+    public void test3 (){
 
+        List<Student> students = studentService.getStudents("111");
+        System.out.println("students = " + students);
+    }
     @Test
     public void testRedis(){
         ValueOperations operations = redisTemplate.opsForValue();

@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 //@Component
 public class ConsumerTask implements CommandLineRunner {
-    @DubboReference
+    @DubboReference()
     private StreamObserverService streamObserverService;
 
     private AtomicLong atomic = new AtomicLong(1L);

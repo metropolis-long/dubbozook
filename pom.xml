@@ -44,6 +44,11 @@
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+            <version>3.23.4</version>
+        </dependency>
 
 
         <!-- 测试环境 -->
@@ -100,7 +105,6 @@
             <artifactId>dubbo-common</artifactId>
             <version>3.2.4</version>
         </dependency>
-
 
     </dependencies>
 

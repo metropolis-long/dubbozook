@@ -1,12 +1,13 @@
 package org.bamboo.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.bamboo.mapper.StudentMapper;
 import org.bamboo.mapper.UserMapper;
 import org.bamboo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 
-//@DubboService
+@DubboService
 @Slf4j
 public class UserServiceImpl implements UserService {
 

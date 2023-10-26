@@ -31,15 +31,18 @@ spring:
       username: root
       password: 123456
       driver-class-name: com.mysql.cj.jdbc.Driver
-#dubbo:
-#  protocol:
-#    #    name: dubbo
+dubbo:
+  protocol:
+   name: dubbo
 #    name: tri
 #    port: -1
-#  #    serialization: protobuf
-#  #    serialization: kryo
-#  registry:
+  registry:
 #    address: zookeeper://localhost:2181
+    address: zookeeper://47.94.159.35:2181
+    timeout: 5000000
+    # 新加的参数
+    parameters:
+      blockUntilConnectedWait: 9999999
 
 
 

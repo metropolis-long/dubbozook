@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-//@DubboService(version = "2.0")
+@DubboService(version = "2.0")
 @Slf4j
 public class StudentServiceV2Impl implements StudentService {
 

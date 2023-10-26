@@ -7,10 +7,12 @@ import org.bamboo.service.StreamObserverService;
 import org.bamboo.service.StreamObserverServiceImpl;
 import org.bamboo.service.StudentService;
 import org.bamboo.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import redis.clients.jedis.JedisPool;
 
 import java.util.List;
 
@@ -24,17 +26,23 @@ public class UserCtl {
     @DubboReference(version = "1.0")
     private StudentService studentService;
 
+    @Autowired
+    private JedisPool jedisPool;
 
     @DubboReference
     private StreamObserverService streamObserverService;
     @GetMapping("/time")
     public String get(){
-        String time = userService.getUser();
+        String username = jedisPool.getResource().get("username");
+        if (username == null || "".equals(username)){
+            username = userService.getUser();
+            jedisPool.getResource().set("username",username);
+        }
         List<Student> bamboo = studentService.getStudents("bamboo");
         for (Student s :bamboo) {
             System.out.println("s = " + s);
         }
-        return time;
+        return username;
     }
 
     @GetMapping("/st/{c}")

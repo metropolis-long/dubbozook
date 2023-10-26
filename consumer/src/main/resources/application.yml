@@ -1,14 +1,30 @@
-
+server:
+  port: 6060
 spring:
   application:
     name: consumer-app
-server:
-  port: 6060
+  data:
+    redis:
+      database: 1
+      password: daily
+      port: 6379
+      host: 127.0.0.1
+      jedis:
+        pool:
+          max-idle: 6    #最大空闲数
+          max-active: 10 #最大连接数
+          min-idle: 2    #最小空闲数
+      timeout: 2000   #连接超时
+
 dubbo:
   application:
     qos-enable: false
   registry:
-    address: zookeeper://localhost:2181
+    address: zookeeper://47.94.159.35:2181
+    timeout: 5000000
+    # 新加的参数
+    parameters:
+      blockUntilConnectedWait: 9999999
   protocol:
-    name: tri
-    port: -1
+    name: dubbo
+#    port: -1
