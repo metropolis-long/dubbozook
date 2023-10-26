@@ -1,4 +1,4 @@
-package org.bamboo.config;
+package org.bamboo.config.redis;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

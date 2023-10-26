@@ -35,7 +35,7 @@ public class UserCtl {
     public String get(){
         String username = jedisPool.getResource().get("username");
         if (username == null || "".equals(username)){
-            username = userService.getUser();
+            username = userService.findUserByUserName("55").getUsername();
             jedisPool.getResource().set("username",username);
         }
         List<Student> bamboo = studentService.getStudents("bamboo");
