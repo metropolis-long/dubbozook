@@ -1,7 +1,7 @@
 package org.bamboo.service;
 
 
-import org.bamboo.anno.Operator;
+import org.bamboo.plugins.annotation.Operator;
 
 @Operator("#a + #b")
 public interface AddService {

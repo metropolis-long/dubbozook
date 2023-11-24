@@ -1,4 +1,4 @@
-package org.bamboo.ctl;
+package org.bamboo.controller;
 
 
 import org.bamboo.service.AddService;

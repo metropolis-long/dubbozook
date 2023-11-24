@@ -1,4 +1,4 @@
-package org.bamboo.anno;
+package org.bamboo.plugins.annotation;
 
 
 import org.springframework.context.annotation.Import;
