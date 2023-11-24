@@ -1,6 +1,8 @@
-package org.bamboo.plugins.annotation;
+package org.bamboo.plugins.register;
 
-import org.bamboo.plugins.proxy.OperatorFactoryBean;
+import org.bamboo.plugins.annotation.EnableOperator;
+import org.bamboo.plugins.annotation.Operator;
+import org.bamboo.plugins.beans.OperatorFactoryBean;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
 import org.springframework.beans.factory.config.BeanDefinition;

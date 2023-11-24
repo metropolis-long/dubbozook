@@ -1,4 +1,4 @@
-package org.bamboo.plugins.proxy;
+package org.bamboo.plugins.beans;
 
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;

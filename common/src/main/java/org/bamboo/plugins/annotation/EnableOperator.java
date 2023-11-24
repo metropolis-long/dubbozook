@@ -1,6 +1,7 @@
 package org.bamboo.plugins.annotation;
 
 
+import org.bamboo.plugins.register.OperatorComponentRegister;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.*;
