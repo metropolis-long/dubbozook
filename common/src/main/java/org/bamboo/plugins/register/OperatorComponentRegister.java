@@ -26,7 +26,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class OperatorComponentRegister implements ImportBeanDefinitionRegistrar , EnvironmentAware, ResourceLoaderAware {
+public class OperatorComponentRegister implements ImportBeanDefinitionRegistrar, EnvironmentAware, ResourceLoaderAware {
 
     private Environment  environment;
     private ResourceLoader resourceLoader;
@@ -43,7 +43,6 @@ public class OperatorComponentRegister implements ImportBeanDefinitionRegistrar 
 
     @Override
     public void registerBeanDefinitions(AnnotationMetadata metadata, BeanDefinitionRegistry registry) {
-//        ImportBeanDefinitionRegistrar.super.registerBeanDefinitions(importingClassMetadata, registry);
         System.out.println("start  register。。。。。。。。。。。。。。。。。");
         Set<String> basePages = new HashSet<>();
         Map<String, Object> attributes = metadata.getAnnotationAttributes(EnableOperator.class.getName());
