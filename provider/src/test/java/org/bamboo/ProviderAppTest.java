@@ -1,10 +1,9 @@
 package org.bamboo;
 
-import org.apache.dubbo.config.annotation.DubboReference;
 import org.bamboo.mapper.StudentMapper;
 import org.bamboo.pojo.Student;
-import org.bamboo.service.StudentService;
 
+import org.bamboo.redis.RedisCache;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,6 +17,15 @@ public class ProviderAppTest {
     @Autowired
     private StudentMapper studentMapper;
 
+    @Autowired
+    private RedisCache redisCache;
+
+    @Test
+    public void testRedis(){
+        redisCache.setCacheObject("jiejie","姐姐");
+        Object jiejie = redisCache.getCacheObject("jiejie");
+        System.out.println(jiejie);
+    }
 
     @Test
     public void test(){
