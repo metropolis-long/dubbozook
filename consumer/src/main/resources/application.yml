@@ -3,6 +3,10 @@ server:
 spring:
   application:
     name: consumer-app
+  servlet:
+    multipart:
+      max-file-size: 10MB  #每个文件大小
+      max-request-size: 30MB  #请求上传文件总量
 
 
 dubbo:
@@ -21,3 +25,10 @@ dubbo:
 
 config-app:
   file: F:\\temp\\outer-file.properties
+
+files:
+  picture:
+    path: D:\\temp\\picture\\
+    source-path: source
+    small-path: small
+    url-prefix: http://loclalhost/

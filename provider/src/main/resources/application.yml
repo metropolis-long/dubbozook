@@ -20,14 +20,14 @@ spring:
   master:
     datasource:
       type: com.alibaba.druid.pool.DruidDataSource
-      url: jdbc:mysql://127.0.0.1:3306/studb
+      url: jdbc:mysql://127.0.0.1:3306/picture
       username: root
       password: 123456
       driver-class-name: com.mysql.cj.jdbc.Driver
   slave:
     datasource:
       type: com.alibaba.druid.pool.DruidDataSource
-      url: jdbc:mysql://127.0.0.1:3306/studb
+      url: jdbc:mysql://127.0.0.1:3306/picture
       username: root
       password: 123456
       driver-class-name: com.mysql.cj.jdbc.Driver
@@ -44,6 +44,11 @@ dubbo:
       blockUntilConnectedWait: 9999999
 
 
+# application.yml
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 
 

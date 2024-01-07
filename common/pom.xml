@@ -25,7 +25,12 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
-
+        <!--图片简缩图-->
+        <dependency>
+            <groupId>net.coobird</groupId>
+            <artifactId>thumbnailator</artifactId>
+            <version>0.4.19</version>
+        </dependency>
         <!-- 不提供此类，可以不适用对应的异常切面bean -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

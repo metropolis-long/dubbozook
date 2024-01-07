@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace = 接口的全限定符 -->
+<mapper namespace="org.bamboo.mapper.ImageMapper">
+
+    <select id="findImages" resultType="org.bamboo.pojo.Image" parameterType="org.bamboo.result.Search">
+        select * from image limit #{page.pageNo},#{page.limit}
+    </select>
+    <select id="getStudentById" resultType="org.bamboo.pojo.Image">
+        select * from image where id= #{id}
+    </select>
+    <insert id="add" parameterType="org.bamboo.pojo.Image" useGeneratedKeys="true">
+        insert into image (file_name,image_title,tag,url_prefix,path,source_path,small_path)
+        value(#{fileName}, #{imageTitle}, #{tag}, #{urlPrefix}, #{path}, #{sourcePath},#{smallPath})
+    </insert>
+</mapper>
