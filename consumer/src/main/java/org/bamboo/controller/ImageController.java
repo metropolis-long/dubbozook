@@ -3,6 +3,7 @@ package org.bamboo.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.bamboo.dto.ImageDTO;
 import org.bamboo.pojo.Image;
 import org.bamboo.result.Result;
 import org.bamboo.result.Search;
@@ -67,12 +68,12 @@ public class ImageController {
         System.out.println(filePath);
         String smallFile = ImageTools.localImageCompress(path+smallPath,filePath,newFileName);
         return imageService.addImage(imageTitle,newFileName,tag,urlPrefix,filePath,
-                sourcePath+newFileName,smallPath+newFileName);
+                sourcePath+"/"+newFileName,smallPath+"/"+newFileName);
     }
     @GetMapping("/images")
     public  Object findImages(){
         Search<Image> search =new Search();
-        List<Image> images = imageService.findImages(search);
+        List<ImageDTO> images = imageService.findImages(search);
         return new Result(images,200,"ok");
     }
 

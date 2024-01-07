@@ -5,7 +5,7 @@
 <!-- namespace = 接口的全限定符 -->
 <mapper namespace="org.bamboo.mapper.ImageMapper">
 
-    <select id="findImages" resultType="org.bamboo.pojo.Image" parameterType="org.bamboo.result.Search">
+    <select id="findImages" resultType="org.bamboo.dto.ImageDTO" parameterType="org.bamboo.result.Search">
         select * from image limit #{page.pageNo},#{page.limit}
     </select>
     <select id="getStudentById" resultType="org.bamboo.pojo.Image">

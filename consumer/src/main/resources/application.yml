@@ -31,4 +31,4 @@ files:
     path: D:\\temp\\picture\\
     source-path: source
     small-path: small
-    url-prefix: http://loclalhost/
+    url-prefix: http://localhost//

@@ -1,6 +1,7 @@
 package org.bamboo.service.impl;
 
 import org.apache.dubbo.config.annotation.DubboService;
+import org.bamboo.dto.ImageDTO;
 import org.bamboo.mapper.ImageMapper;
 import org.bamboo.pojo.Image;
 import org.bamboo.result.Search;
@@ -29,8 +30,8 @@ public class ImageServiceImpl implements ImageService {
     }
 
     @Override
-    public List<Image> findImages(Search<Image> search) {
-        List<Image> images = imageMapper.findImages(search);
+    public List<ImageDTO> findImages(Search<Image> search) {
+        List<ImageDTO> images = imageMapper.findImages(search);
         return images;
     }
 }

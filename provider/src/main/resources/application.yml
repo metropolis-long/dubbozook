@@ -45,10 +45,12 @@ dubbo:
 
 
 # application.yml
+# application.yml
+logging:
+  level:
+    org.bamboo.mapper: debug
 
-mybatis:
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
 
 
 
