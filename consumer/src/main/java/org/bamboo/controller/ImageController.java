@@ -71,8 +71,11 @@ public class ImageController {
                 sourcePath+"/"+newFileName,smallPath+"/"+newFileName);
     }
     @GetMapping("/images")
-    public  Object findImages(){
+    public  Object findImages(Integer id){
         Search<Image> search =new Search();
+        Image image = new Image();
+        image.setId(id);
+        search.setData(image);
         List<ImageDTO> images = imageService.findImages(search);
         return new Result(images,200,"ok");
     }

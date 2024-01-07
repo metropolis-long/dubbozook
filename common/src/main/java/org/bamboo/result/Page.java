@@ -12,7 +12,8 @@ import java.io.Serializable;
 public class Page implements Serializable {
     private static final long serialVersionUID  = 1L;
     private int limit =10;
-    private int pageNo=1;
-    private int total;
-    private int page = total==0?0:total/limit+1;
+    private int pageNo=this.pageNumber*this.limit;
+    private int pageNumber=0;
+    private int totalNumber;
+    private int totalPage = this.totalNumber==0?0:this.totalNumber / this.limit+1;
 }

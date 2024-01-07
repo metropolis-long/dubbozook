@@ -1,6 +1,7 @@
 package org.bamboo.service.impl;
 
 import org.apache.dubbo.config.annotation.DubboService;
+import org.bamboo.apo.MasterDataSource;
 import org.bamboo.dto.ImageDTO;
 import org.bamboo.mapper.ImageMapper;
 import org.bamboo.pojo.Image;
@@ -15,6 +16,7 @@ public class ImageServiceImpl implements ImageService {
 
     @Autowired
     private ImageMapper imageMapper;
+    @MasterDataSource
     public boolean addImage(String imageTitle,String fileName, String tag, String url,String path,String sourcePath, String smallPath){
         System.out.println("fileName = " + fileName + ", sourcePath = " + sourcePath + ", smallPath = " + smallPath);
         Image image = new Image();
